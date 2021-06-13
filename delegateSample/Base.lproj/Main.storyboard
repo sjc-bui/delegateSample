@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="delegateSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qib-Ey-lid" customClass="CustomStackView" customModule="delegateSample" customModuleProvider="target">
+                                <rect key="frame" x="20" y="211.5" width="280" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0o-ZL-KSh">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oBM-hu-Xg8">
+                                <rect key="frame" x="68.5" y="43.5" width="231.5" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSQ-b7-J1T">
+                                <rect key="frame" x="20" y="50" width="32.5" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rows" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ib5-v0-aft">
+                                <rect key="frame" x="20" y="104.5" width="41" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4dL-vN-Xhr">
+                                <rect key="frame" x="77" y="99.5" width="223" height="32"/>
+                                <segments>
+                                    <segment title="One"/>
+                                    <segment title="Two"/>
+                                    <segment title="Three"/>
+                                    <segment title="Four"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReF-Lz-E8c">
+                                <rect key="frame" x="91.5" y="142.5" width="137" height="33"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <state key="normal" title="Update stackview">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateStackViewTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fVW-41-p2M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4dL-vN-Xhr" secondAttribute="trailing" constant="20" id="4c5-TQ-Skp"/>
+                            <constraint firstItem="uSQ-b7-J1T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="8uW-BY-mJP"/>
+                            <constraint firstItem="4dL-vN-Xhr" firstAttribute="leading" secondItem="ib5-v0-aft" secondAttribute="trailing" constant="16" id="9YP-hE-m1l"/>
+                            <constraint firstItem="4dL-vN-Xhr" firstAttribute="centerY" secondItem="ib5-v0-aft" secondAttribute="centerY" id="EaZ-VL-o8O"/>
+                            <constraint firstItem="ib5-v0-aft" firstAttribute="top" secondItem="uSQ-b7-J1T" secondAttribute="bottom" constant="34" id="L0L-sL-DRz"/>
+                            <constraint firstItem="ib5-v0-aft" firstAttribute="leading" secondItem="uSQ-b7-J1T" secondAttribute="leading" id="N64-PT-HaB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oBM-hu-Xg8" secondAttribute="trailing" constant="20" id="U4t-vS-0cN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qib-Ey-lid" secondAttribute="trailing" constant="20" id="UXb-AK-C9q"/>
+                            <constraint firstItem="qib-Ey-lid" firstAttribute="top" secondItem="ReF-Lz-E8c" secondAttribute="bottom" constant="36" id="Xj1-Hg-VlJ"/>
+                            <constraint firstItem="uSQ-b7-J1T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fHa-Ct-XLI"/>
+                            <constraint firstItem="oBM-hu-Xg8" firstAttribute="centerY" secondItem="uSQ-b7-J1T" secondAttribute="centerY" id="fIB-pE-ndc"/>
+                            <constraint firstItem="qib-Ey-lid" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lJD-t9-m0e"/>
+                            <constraint firstItem="ReF-Lz-E8c" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="x9y-B6-sxc"/>
+                            <constraint firstItem="ReF-Lz-E8c" firstAttribute="top" secondItem="4dL-vN-Xhr" secondAttribute="bottom" constant="12" id="xAN-0h-IoE"/>
+                            <constraint firstItem="oBM-hu-Xg8" firstAttribute="leading" secondItem="uSQ-b7-J1T" secondAttribute="trailing" constant="16" id="yvU-uJ-jGf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="numberOfRowsSegment" destination="4dL-vN-Xhr" id="Cxt-bV-0Dn"/>
+                        <outlet property="stackView" destination="qib-Ey-lid" id="7Vp-2Q-Vde"/>
+                        <outlet property="textField" destination="oBM-hu-Xg8" id="4aT-fe-SFk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.875" y="125.70422535211267"/>
+        </scene>
+    </scenes>
+</document>
